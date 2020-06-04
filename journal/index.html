@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Gideon's Journal</title>
+        <link href="https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao|Righteous&display=swap" rel="stylesheet">
+
+        <style>
+            h1, h2, h3,h4, h5, h6{
+                text-align:center;
+                font-family:"Righteous",sans-serif;
+            }
+            p{
+                font-family:"Liu Jian Mao Cao", cursive;
+                text-align: left;
+                text-indent:1.27cm;
+            }
+            summary{
+                background-color:bisque;
+            }
+            /* The switch - the box around the slider */
+            .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+            }
+
+            /* Hide default HTML checkbox */
+            .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+            }
+
+            /* The slider */
+            .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+            }
+
+            .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+            }
+
+            input:checked + .slider {
+            background-color: #2196F3;
+            }
+
+            input:focus + .slider {
+            box-shadow: 0 0 1px #2196F3;
+            }
+
+            input:checked + .slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+            }
+
+            .label{
+                position:absolute;
+                top:17px;
+                margin-left: 5px;
+            }
+
+            input{
+                width:50%;
+                position: absolute;
+            }
+
+            #date{
+                left:50%;
+            }
+
+            .post-text{
+                width:100%;
+            }
+
+            
+        </style>
+    </head>
+    <body>
+        
+        <label class="switch">
+            <input id="checkbox" type="checkbox" onclick="easyFont()">
+            <span class="slider round"></span>
+        </label> <span class="label">Toggle Easy Read Font</span>
+
+        <h1>Gideon's Journal</h1>
+        <div id="contents">
+                <details>
+                    <summary>Contents</summary>
+                    <ol>
+                        <li><a href='#first_post'>First post! (3/27/2020)</a></li>
+                    </ol>
+                </details>
+        </div>
+        <div id="blog">
+                <div class="post">        
+                    <h2 id="first_post">First post</h2>
+                    <h6>Posted on: Friday March 27, 2020 by Gideon Grinberg</h6>
+                    
+                    <p>Yesterday, mom said I have to keep a journal of my "expiriences" during this pandemic. When KhanAcademy gave me this blog project, I decided it would be a good idea. Over spring break, we went to Whistler, but then that closed so we drove 6 hrs to Revelstoke, which closed the next day. So, we drove 5 1/2 hrs to Vancouver where we flew home. My Bar Mitzvah was cancled and now I am stuck in the house. A few days ago, I had my family do the Sour Grapes of Wrath Murder Mystery Game, Which was fun. I guessed that Norman D'Adly killed Elizabeth Killingsworth, the love of his life because he thought that she was her identical twin, Vicki D'Adly. Norman wanted to kill Vicki and marry Elizabeth. What I didn't figure out was most of the other characters where also trying to kill Elizabeth</p>
+            </div>
+            <div class="post">
+                <h2>Second Post</h2>
+                <h6>Posted on: Saturday March 28, 2020 (Updated Sunday March 29 2020) by Gideon Grinberg</h6>
+                <p>Today was just another day in the shutdown world. I was building my LEGO (TM) Eiffel Tower (I didn't improperly format the trade mark, butthis google font doesn't support superscript.) Mommy had Noah work with me on it, and at first I was upset but later I realized that He was actually helpful. Then, he got angry and broke the structure. I was upset about working with him because I wanted some peace and quiet, and to finish my own project, which was wrong of me. I am bored. All I do is read and do KhanAcademy. I have learn HTML, JS, and SQL in the past days. I never thought I would say it, but I want school to start. Last night, Lilliana and I had a sleepover, and we got in trouble because mommy said we couldn't. I lied about it and I feel bad. I barely slept a wink with her talking up a storm. Tommorow, I will set up a posting feature so I don't have to directly edit HTML. I will set up easy read font today I hope. 
+            </div>
+        </div> 
+        <form>
+            <input type="text" placeholder="Title"> <input type="text" id="date">
+            <input class="post-text" type="text" placeholder="Write here...">
+        </form>  
+        <script src="setDate.js"></script> 
+    </body>
+</html>
